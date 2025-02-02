@@ -8,33 +8,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/styles.min.css">
 </head>
-
-
 <body>
     <header class="header">
-        <div class="container">
+        <div class="container header__container">
             <nav class="header__nav">
                 <ul class="header__list">
                     <li class="header__item"><a href="#wooden-furniture" class="header__link">Wooden Furniture</a></li>
                     <li class="header__item"><a href="#about" class="header__link">About</a></li>
                     <li class="header__item"><a href="#stories" class="header__link">Stories</a></li>
                 </ul>
-                <div class="header__logo">
-                    <a href="#">
-                        <img src="img/logos/logo.png" alt="Woodendot Logo" class="header__logo-img">
-                    </a>
-                </div>
 
-                <!-- Мобільне меню-->
-                <button class="burger-btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <div class="overlay"></div>
             </nav>
+            <div class="header__logo">
+                <a href="#">
+                    <img src="img/logos/logo.png" alt="Woodendot Logo" class="header__logo-img">
+                </a>
+            </div>
+            <!-- Мобільне меню-->
+            <button class="burger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="overlay"></div>
+
         </div>
     </header>
     <main>
@@ -44,8 +44,8 @@
                     <h1 class="hero__title">
                         Furniture designed to live in harmony, creating distinctive and timeless spaces
                     </h1>
-                    <button class="hero__btn">Discover now</button>
-                    <button class="hero__btn-black">Do you know what is your decor style?</button>
+                    <button data-modal class="hero__btn">Discover now</button>
+                    <button data-modal class="hero__btn-black">Do you know what is your decor style?</button>
 
                 </div>
             </div>
@@ -78,10 +78,10 @@
         </section>
         <section class="gallery">
             <div class="gallery__container">
-                <img src="img/gallary/gal-1.jpg" alt="Photo 1" class="gallery__item">
-                <img src="img/gallary/gal-2.jpg" alt="Photo 2" class="gallery__item">
-                <img src="img/gallary/gal-3.jpg" alt="Photo 3" class="gallery__item">
-                <img src="img/gallary/gal-4.jpg" alt="Photo 4" class="gallery__item">
+                <img src="img/gallery/gal-1.jpg" alt="Photo 1" class="gallery__item">
+                <img src="img/gallery/gal-2.jpg" alt="Photo 2" class="gallery__item">
+                <img src="img/gallery/gal-3.jpg" alt="Photo 3" class="gallery__item">
+                <img src="img/gallery/gal-4.jpg" alt="Photo 4" class="gallery__item">
             </div>
         </section>
         <section class="products">
@@ -100,7 +100,7 @@
                                 An <span>expansive</span> way to furnish your space exactly how you need it and like it. 
                                 Transform it into exactly what you need, like a bookshelf, TV stand, or show rack. You pick.
                             </p>
-                            <button class="product__button">Shop now</button>
+                            <button data-modal class="product__button">Shop now</button>
                         </div>
                         <div class="product__image">
                             <img src="img/cloe.jpg" alt="Cloe Modular Storage System">
@@ -123,7 +123,7 @@
                                     + 3 sizes, + 5 color finishes
                                 </p>
                             </div>
-                            <button class="product__button">Shop now</button>
+                            <button data-modal class="product__button">Shop now</button>
                         </div>
                         <div class="product__image">
                             <img src="img/pelican.jpg" alt="Cloe Modular Storage System">
@@ -149,7 +149,7 @@
                                     + 4 color finishes
                                 </p>
                             </div>
-                            <button class="product__button">Shop now</button>
+                            <button data-modal class="product__button">Shop now</button>
                         </div>
                         <div class="product__image">
                             <img src="img/alada.jpg" alt="Cloe Modular Storage System">
@@ -172,7 +172,7 @@
                                     + 6 color finishes, infinite combinations
                                 </p>
                             </div>
-                            <button class="product__button">
+                            <button data-modal class="product__button">
                                 Shop now
                             </button>
                             <img src="img/alba-logos.png" alt="logos" class="product__logos">
@@ -197,10 +197,10 @@
                                     + 3 sizes, + 6 color finishes
                                 </p>
                             </div>
-                            <button class="product__button">Shop now</button>
+                            <button data-modal class="product__button">Shop now</button>
                         </div>
                         <div class="product__image">
-                            <img src="img/alada.jpg" alt="Cloe Modular Storage System">
+                            <img src="img/batea.jpg" alt="Cloe Modular Storage System">
                         </div>
                     </div>
                 </div>
@@ -212,51 +212,131 @@
                 <p class="insta-gallery__subtitle">
                     Get inspired by our products in real-life. Tag us and be featured!
                 </p>
-                <div class="insta-gallery__wrapper">
-                    <div class="insta-gallery__item">
-                        <div class="insta-gallery__img">
-                            <img src="img/01.jpg" alt="Decor on a white table" >
-                            <div class="insta-gallery__author">
-                                <img src="img/icons/insta.svg" alt="logo">
-                                <span>sixthdaymer</span>
+                <div class="swiper">
+                    <div class="swiper-wrapper insta-gallery__wrapper">
+                        <div class="swiper-slide insta-gallery__item">
+                            <div class="insta-gallery__img">
+                                <img src="img/01.jpg" alt="Decor on a white table" >
+                                <div class="insta-gallery__author">
+                                    <img src="img/icons/insta.svg" alt="logo">
+                                    <span>sixthdaymer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide insta-gallery__item">
+                            <div class="insta-gallery__img">
+                                <img src="img/02.jpg" alt="Decor on a white table" >
+                                <div class="insta-gallery__author">
+                                    <img src="img/icons/insta.svg" alt="logo">
+                                    <span>linda.m.karlsen</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide insta-gallery__item">
+                            <div class="insta-gallery__img">
+                                <img src="img/03.jpg" alt="Decor on a white table" >
+                                <div class="insta-gallery__author">
+                                    <img src="img/icons/insta.svg" alt="logo">
+                                    <span>martagtarrio_</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide insta-gallery__item">
+                            <div class="insta-gallery__img">
+                                <img src="img/01.jpg" alt="Decor on a white table" >
+                                <div class="insta-gallery__author">
+                                    <img src="img/icons/insta.svg" alt="logo">
+                                    <span>sixthdaymer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide insta-gallery__item">
+                            <div class="insta-gallery__img">
+                                <img src="img/03.jpg" alt="Decor on a white table" >
+                                <div class="insta-gallery__author">
+                                    <img src="img/icons/insta.svg" alt="logo">
+                                    <span>martagtarrio_</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide insta-gallery__item">
+                            <div class="insta-gallery__img">
+                                <img src="img/01.jpg" alt="Decor on a white table" >
+                                <div class="insta-gallery__author">
+                                    <img src="img/icons/insta.svg" alt="logo">
+                                    <span>sixthdaymer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide insta-gallery__item">
+                            <div class="insta-gallery__img">
+                                <img src="img/02.jpg" alt="Decor on a white table" >
+                                <div class="insta-gallery__author">
+                                    <img src="img/icons/insta.svg" alt="logo">
+                                    <span>linda.m.karlsen</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide insta-gallery__item">
+                            <div class="insta-gallery__img">
+                                <img src="img/03.jpg" alt="Decor on a white table" >
+                                <div class="insta-gallery__author">
+                                    <img src="img/icons/insta.svg" alt="logo">
+                                    <span>martagtarrio_</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide insta-gallery__item">
+                            <div class="insta-gallery__img">
+                                <img src="img/01.jpg" alt="Decor on a white table" >
+                                <div class="insta-gallery__author">
+                                    <img src="img/icons/insta.svg" alt="logo">
+                                    <span>sixthdaymer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide insta-gallery__item">
+                            <div class="insta-gallery__img">
+                                <img src="img/03.jpg" alt="Decor on a white table" >
+                                <div class="insta-gallery__author">
+                                    <img src="img/icons/insta.svg" alt="logo">
+                                    <span>martagtarrio_</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="insta-gallery__item">
-                        <div class="insta-gallery__img">
-                            <img src="img/02.jpg" alt="Decor on a white table" >
-                            <div class="insta-gallery__author">
-                                <img src="img/icons/insta.svg" alt="logo">
-                                <span>linda.m.karlsen</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="insta-gallery__item">
-                        <div class="insta-gallery__img">
-                            <img src="img/03.jpg" alt="Decor on a white table" >
-                            <div class="insta-gallery__author">
-                                <img src="img/icons/insta.svg" alt="logo">
-                                <span>martagtarrio_</span>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-                <div class="insta-gallery__pagination">
-                   Пагінація
-                </div>
+                
+
             </div>
         </section>
         <section class="reviews">
             <div class="container">
-                <div class="reviews__item">
-                    <p class="reviews__text">
-                        "The team from Woodendot has displayed utmost professionalism from order to deliver and customer support. We placed an order to the UK and would definitely recommend friends to order from Woodendot!"
-                    </p>
-                    <p class="reviews__author">R. Aoun, United Kingdom</p>
+                <div class="swiper reviews-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <p class="reviews__text">
+                                "The team from Woodendot has displayed utmost professionalism from order to deliver and customer support. We placed an order to the UK and would definitely recommend friends to order from Woodendot!"
+                            </p>
+                            <p class="reviews__author">R. Aoun, United Kingdom</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p class="reviews__text">
+                                "I was very impressed with the quality of the products and the speed of delivery. I will definitely be ordering from Woodendot again!"
+                            </p>
+                            <p class="reviews__author">"J. Smith, USA"</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p class="reviews__text">
+                                "Beautiful, high-quality furniture that fits perfectly in my home. Highly recommend! It has transformed the space and adds both style and comfort."
+                            </p>
+                            <p class="reviews__author">"L. Garcia, Spain"</p>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-                <div class="reviews__pagination">
-                  <span class="reviews__pagination-info">Pagination</span>
-                </div>
+                
             </div>
         </section>
         <section class="features">
@@ -268,7 +348,7 @@
               <p class="features__text">
                 We create furniture pieces with personality, designed to transform your space.
             </p>
-              <button class="features__btn">Learn more</button>
+              <button data-modal class="features__btn">Learn more</button>
             </div>
             <div class="features__card features__card_gray">
               <div class="features__icon">
@@ -278,7 +358,7 @@
               <p class="features__text">
                 We are committed to look after what we love, nature..
             </p>
-              <button class="features__btn">Learn more</button>
+              <button data-modal class="features__btn">Learn more</button>
             </div>
             <div class="features__card">
                 <div class="features__icon">
@@ -288,7 +368,7 @@
                 <p class="features__text">
                     Our local design, and production in the village of Iscar, Spain.
                 </p>
-                <button class="features__btn">Learn more</button>
+                <button data-modal class="features__btn">Learn more</button>
               </div>
               <div class="features__card features__card_gray">
                 <div class="features__icon">
@@ -298,7 +378,7 @@
                 <p class="features__text">
                     Our characteristic and main material, and its unique and timeless attributes.
                 </p>
-                <button class="features__btn">Learn more</button>
+                <button data-modal class="features__btn">Learn more</button>
               </div>
           </section>
           <section class="partners">
@@ -365,7 +445,7 @@
                 <p class="small-text">
                     Don’t miss any news and exclusive offers!
                 </p>
-                <button class="footer__btn">Newsletter subscription</button>
+                <button data-modal class="footer__btn">Newsletter subscription</button>
                 <div class="footer__logos">
                     <img src="img/logos/001.png" alt="Logo 1" class="footer__logo">
                     <img src="img/logos/002.png" alt="Logo 2" class="footer__logo">
@@ -397,37 +477,53 @@
 
           <!-- Модальне вікно -->
           <div class="modal">
-            <form class="contacts-form">
-                <button data-close class="contacts-form__close" aria-label="Close modal window"></button>
+            <form id="form" class="contacts-form">
+                <button type="button" data-close class="contacts-form__close" aria-label="Close modal window"></button>
                 <h4 class="contacts-form__title">Contact Us</h4>
+
                 <label class="form-field">
-                    <span class="form-field__caption"> Name</span>
-                    <input type="text" name="name" placeholder="Your name" required class="form-field__input">
+                    <span class="form-field__caption">Name</span>
+                    <input class="form-field__input" type="text" id="name" name="name" placeholder="Your name" required  autocomplete="given-name">
+                    <span class="error-message" id="nameError">Заповніть це поле</span>
                 </label>
+
                 <label class="form-field">
                     <span class="form-field__caption">Last Name</span>
-                    <input type="text" name="lastname" placeholder="Your last name" required class="form-field__input">
+                    <input class="form-field__input" type="text" id="lastName" name="lastName" placeholder="Your last name" required  autocomplete="family-name">
+                    <span class="error-message" id="lastNameError">Заповніть це поле</span>
                 </label>
+
                 <label class="form-field">
                     <span class="form-field__caption">Phone</span>
-                    <input type="tel" name="phone" placeholder="Your phone number" class="form-field__input">
+                    <input class="form-field__input" type="tel" id="phone" name="phone" placeholder="Your phone number"  autocomplete="tel">
+                    <span class="error-message" id="phoneError">Заповніть це поле</span>
                 </label>
-                <label class="form-field ">
+
+                <label class="form-field">
                     <span class="form-field__caption">Email</span>
-                    <input type="email" name="email" placeholder="Your working email" class="form-field__input">
+                    <input class="form-field__input" type="email" id="email" name="email" placeholder="Your working email"  autocomplete="email">
+                    <span class="error-message" id="emailError">Заповніть це поле</span>   
                 </label>
+
                 <label class="form-field form-field_big">
                     <span class="form-field__caption">Message</span>
-                    <textarea name="email" placeholder="Your message" class="form-field__input"></textarea>
+                    <textarea class="form-field__input" id="message" name="message" placeholder="Your message"></textarea>
+                    <span class="error-message" id="messageError">Заповніть це поле</span>
                 </label>
+
                 <label class="custom-checkbox">
-                    <input type="checkbox" checked class="custom-checkbox__input">
+                    <input class="custom-checkbox__input" type="checkbox" name="agree" checked >
                     <span class="custom-checkbox__text">I agree to receive communications from Woodendot</span>
                 </label>
-                <button class="contacts-form__btn" type="submit">Send request</button>
+
+                <button class="contacts-form__btn" id="submitBtn" type="submit" disabled>Send request</button>
             </form>
         </div>      
     </main> 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
 

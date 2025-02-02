@@ -1,0 +1,77 @@
+.insta-gallery {
+    padding: 50px 0;
+    text-align: center;
+
+    &__title {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    &__subtitle{ 
+        font-size: 18px;
+        margin-bottom: 36px;
+    }
+
+    &__img{
+        width: 367px;
+        position: relative;
+
+        img {
+            max-width: 100%; 
+            height: auto; 
+        }
+    }
+
+    &__author {
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        display: flex;
+        gap: 12px;
+        color: #fff;
+
+        @media (max-width: 425px) {
+            right: 50%;
+            transform: translateX(-50%);
+        }
+    }  
+}
+
+// СТИЛІ ДЛЯ Swiper
+.swiper {
+    max-width: 1120px;
+    position: relative;
+}
+
+.swiper-wrapper {
+    display: flex;
+    justify-content: start;
+    margin: 0 auto;
+}
+.swiper-pagination {
+    position: static;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    padding: 20px 0;
+}
+  
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  
+    &.swiper-pagination-bullet-active {
+        background-color: #000;
+        transform: scale(1.4); 
+    }
+  
+    &:hover {
+        background-color: #000;
+        transform: scale(1.4); 
+    }
+}

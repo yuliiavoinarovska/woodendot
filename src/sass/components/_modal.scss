@@ -1,0 +1,130 @@
+// MODAL WINDOW AND FORM
+.modal {
+	position: fixed;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.75);
+	z-index: 100;
+	opacity: 0;
+	visibility: hidden;
+    overflow-x: hidden;
+	transition: all 0.6s ease-in-out;
+
+	&_show {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&_hide {
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+.contacts-form {
+	padding: 30px 48px;
+	width: 470px;
+    max-height: 98vh;
+    background: #fff;
+    border-radius: 4px;
+	position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    overflow-y: auto;
+
+    @media (max-width: 425px) {
+		width: 90%;
+        gap: 14px;
+    }
+
+    &__title {
+        font-size: 24px;
+        text-align: center;
+    }
+
+	&__close {
+		position: absolute;
+		top: 24px;
+		right: 24px;
+		width: 16px;
+		height: 16px;
+		background: url('../img/icons/modal-close.svg') center / cover no-repeat;
+	}
+
+	&__btn {
+        padding: 0 30px;
+		width: 100%;
+        font-size: 16px;
+        color: #fff;
+        line-height: 40px;
+        text-transform: uppercase;
+        background-color: #000;
+	}
+
+    @media (max-width: 425px) {
+        width: 90%;
+        padding: 24px 16px;
+    }
+}
+
+.form-field {
+    display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+    width: 100%;
+
+	&__caption {
+		color: #424551;
+		font-size: 14px;
+		font-weight: 400;
+	}
+
+	&__input {
+		width: 100%;
+		height: 38px;
+		padding-left: 16px;
+		padding-right: 16px;
+		border: 1px solid #1e212c;
+		background: #f4f5f6;
+		color: #000;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 150%;
+
+		&::placeholder {
+			color: #9a9ca5;
+		}
+
+		&:focus {
+			outline: 2px solid #0c2380;
+			outline-offset: 2px;
+		}
+	}
+
+	&_big {
+		textarea {
+			height: 60px;
+			resize: none;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	}
+}
+
+.error-message {
+    color: red;
+    display: none;
+    font-family: 'Roboto';
+    font-size: 12px;
+    margin-top: 4px;
+}
+  
+button:disabled {
+    background-color: #808080;
+}

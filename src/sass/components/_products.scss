@@ -1,0 +1,112 @@
+.products {
+    padding: 115px 0 40px 0;
+    &__wrapper {
+        display: grid;
+        grid-template-rows: repeat(5, auto);
+        row-gap: 30px;
+
+        @media (max-width: 425px) {
+            grid-template-columns: 1fr;
+            row-gap: 40px;
+        }
+    }
+}
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    text-align: right;
+
+    &_reverse {
+        flex-direction: row-reverse;
+        text-align: left;
+
+        @media (max-width: 425px) {
+            flex-direction: none; 
+        }
+    }
+
+    &__content {
+        flex: 0 0 auto; 
+        max-width: 360px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+
+        @media (max-width: 425px) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 24px;
+
+        @media (max-width: 425px) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__new-subtitle {
+        margin-bottom: 24px;
+        @media (max-width: 425px) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__price {
+        margin-bottom: 24px;
+
+        @media (max-width: 425px) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__description {
+        margin-bottom: 50px;
+
+        p:first-of-type {
+            margin-bottom: 16px;
+          }
+
+
+        @media (max-width: 425px) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__button {
+        font-size: 17px;
+        padding: 6px;
+        border-bottom: 1px solid #000;
+        transition: all 0.4s ease-in-out;
+
+        &:hover {
+            background-color: #000;
+            color: #fff; 
+        }
+    }
+
+    &__logos {
+        margin-top: 55px;
+    }
+
+    &__image {
+        flex: 1 1 auto;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    @media (max-width: 425px) {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        text-align: left;
+        gap: 24px;
+    }
+}

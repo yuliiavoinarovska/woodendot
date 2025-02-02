@@ -1,0 +1,96 @@
+body {
+    font-family: 'Cardo', serif; 
+    line-height: 1.5;
+}
+
+.container {
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.title {
+    font-family: 'Roboto';
+    font-size: 31px;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #000;
+    font-size: 18px;
+    font-style: italic;
+
+    &_newitem {
+        color: #bc1414;
+        font-size: 14px;
+    }
+}
+
+.main-text {
+    color: #54595f;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.small-text {
+    font-size: 15px;
+    color: #000;
+    line-height: 20px;
+}
+
+// CHECKBOX
+.custom-checkbox {
+	position: relative;
+    width: 100%;
+
+	&__input {
+		appearance: none;
+		position: absolute;
+	}
+
+	&__text {
+		display: inline-block;
+		position: relative;
+		padding-left: 28px;
+		color: #424551;
+		font-family: 'Roboto';
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 150%;
+		cursor: pointer;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 4px;
+			left: 0;
+			border: 1px solid #0c2380;
+			border-radius: 2px;
+			width: 15px;
+			height: 15px;
+			box-sizing: border-box;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 4px;
+			left: 0;
+			width: 15px;
+			height: 15px;
+			box-sizing: border-box;
+			border-radius: 2px;
+			background-image: url("../img/icons/check.svg");
+			background-color: #0c2380;
+			background-position: center;
+			background-size: 10px 10px;
+			background-repeat: no-repeat;
+			opacity: 0;
+			transition: opacity 0.3s ease-in-out;
+		}
+	}
+}
+
+.custom-checkbox__input:checked + .custom-checkbox__text::after {
+	opacity: 1;
+}

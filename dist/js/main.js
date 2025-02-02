@@ -58,6 +58,10 @@ document.addEventListener("DOMContentLoaded", () => {
     loop: true,
     slidesPerView: 3,
     spaceBetween: 16,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -82,6 +86,10 @@ document.addEventListener("DOMContentLoaded", () => {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 20,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".reviews-slider .swiper-pagination",
       clickable: true,
@@ -137,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const errorMessage = document.getElementById(input.id + "Error");
 
       if (input.value.trim() === "") {
-        if (errorMessage) {
+        if (errorMessage && input.classList.contains("touched")) {
           errorMessage.style.display = "inline";
         }
         isFormComplete = false;
@@ -152,6 +160,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   inputs.forEach((input) => {
+    input.addEventListener("blur", () => {
+      input.classList.add("touched");
+      checkFormCompletion();
+    });
+
     input.addEventListener("input", checkFormCompletion);
   });
 
@@ -161,78 +174,4 @@ document.addEventListener("DOMContentLoaded", () => {
       checkFormCompletion();
     }
   });
-});
-
-// GSAP ANIMATIONS
-const tl = gsap.timeline();
-
-tl.fromTo(
-  ".hero__btn",
-  {
-    // y: 20,
-    opacity: 0,
-  },
-  {
-    y: 0,
-    opacity: 1,
-    duration: 1.4,
-    ease: "power2.out",
-  },
-  0.8
-)
-  .fromTo(
-    ".hero__title",
-    {
-      y: 50,
-      opacity: 0,
-    },
-    {
-      y: 0,
-      opacity: 1,
-      duration: 1.4,
-      ease: "power2.out",
-    },
-    0.6
-  )
-  .fromTo(
-    ".hero__btn-black",
-    {
-      // y: 20,
-      opacity: 0,
-    },
-    {
-      y: 0,
-      opacity: 1,
-      duration: 1.4,
-      ease: "power2.out",
-    },
-    1.4
-  );
-gsap.from(".benefits__icon", {
-  scrollTrigger: {
-    trigger: ".benefits",
-    start: "-30% center",
-    end: "+=300px",
-    scrub: true,
-  },
-  scale: 0,
-  transformOrigin: "left center",
-  ease: "none",
-  stagger: 1,
-  duration: 1.5,
-  ease: "power2.out",
-});
-
-gsap.from(".benefits__text", {
-  scrollTrigger: {
-    trigger: ".benefits",
-    start: "-30% center",
-    end: "+=300px",
-    scrub: true,
-  },
-  scale: 0,
-  opacity: 0,
-  duration: 1,
-  stagger: 1,
-  ease: "power2.out",
 });

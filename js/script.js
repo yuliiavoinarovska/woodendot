@@ -162,3 +162,77 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// GSAP ANIMATIONS
+const tl = gsap.timeline();
+
+tl.fromTo(
+  ".hero__btn",
+  {
+    // y: 20,
+    opacity: 0,
+  },
+  {
+    y: 0,
+    opacity: 1,
+    duration: 1.4,
+    ease: "power2.out",
+  },
+  0.8
+)
+  .fromTo(
+    ".hero__title",
+    {
+      y: 50,
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 1.4,
+      ease: "power2.out",
+    },
+    0.6
+  )
+  .fromTo(
+    ".hero__btn-black",
+    {
+      // y: 20,
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 1.4,
+      ease: "power2.out",
+    },
+    1.4
+  );
+gsap.from(".benefits__icon", {
+  scrollTrigger: {
+    trigger: ".benefits",
+    start: "-30% center",
+    end: "+=300px",
+    scrub: true,
+  },
+  scale: 0,
+  transformOrigin: "left center",
+  ease: "none",
+  stagger: 1,
+  duration: 1.5,
+  ease: "power2.out",
+});
+
+gsap.from(".benefits__text", {
+  scrollTrigger: {
+    trigger: ".benefits",
+    start: "-30% center",
+    end: "+=300px",
+    scrub: true,
+  },
+  scale: 0,
+  opacity: 0,
+  duration: 1,
+  stagger: 1,
+  ease: "power2.out",
+});

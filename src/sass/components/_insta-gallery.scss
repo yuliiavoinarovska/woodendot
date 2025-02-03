@@ -30,11 +30,6 @@
         display: flex;
         gap: 12px;
         color: #fff;
-
-        @media (max-width: 425px) {
-            right: 50%;
-            transform: translateX(-50%);
-        }
     }  
 }
 

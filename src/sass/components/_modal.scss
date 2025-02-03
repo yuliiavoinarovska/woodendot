@@ -2,7 +2,7 @@
 .modal {
 	position: fixed;
 	top: 0;
-	height: 100vh;
+	min-height: 100dvh;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -27,7 +27,7 @@
 
 .contacts-form {
 	padding: 30px 48px;
-	width: 470px;
+	max-width: 470px;
     max-height: 98vh;
     background: #fff;
     border-radius: 4px;
@@ -39,8 +39,9 @@
     overflow-y: auto;
 
     @media (max-width: 425px) {
-		width: 90%;
+		max-width: 390px;
         gap: 14px;
+		padding: 24px 16px;
     }
 
     &__title {
@@ -66,11 +67,6 @@
         text-transform: uppercase;
         background-color: #000;
 	}
-
-    @media (max-width: 425px) {
-        width: 90%;
-        padding: 24px 16px;
-    }
 }
 
 .form-field {

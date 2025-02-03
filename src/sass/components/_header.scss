@@ -2,7 +2,7 @@
     padding: 16px 0;
     border-bottom: 1px solid #f2f2f2;
     background-color: #fff;
-
+    
     &__container {
         display: grid;
         grid-template-columns: 1fr auto 1fr; 
@@ -97,6 +97,12 @@
     }
     
     .header {
+        width: 425px; // анімація впливає на розрахунок ширини, фіксована величина вирішила проблему
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 90;
+        
         &__nav {
             position: fixed;
             padding: 60px;

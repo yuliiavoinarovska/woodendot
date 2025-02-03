@@ -60,9 +60,9 @@
         }
 
         @media (max-width: 425px) {
-            left: 50%;
-            transform: translateX(-50%);
-            white-space: nowrap;   
+            position: static; 
+            margin-top: 100px;
+            white-space: nowrap;  
         }
 	}
 }

@@ -10,8 +10,14 @@
     }
 
     &__logo {
+        max-width: 167px;
         grid-column: 2; 
         text-align: center;
+
+        
+        @media (max-width: 1024px) {
+            grid-column: 4; 
+        }
     }
 
     &__logo-img {
@@ -23,6 +29,7 @@
         grid-column: 1;
         display: flex;
         gap: 24px;
+        white-space: nowrap;
     }
 
     &__link {
@@ -30,6 +37,7 @@
         color: #000;
     }
 }
+
 .burger-btn {
 	position: relative;
 	display: none;

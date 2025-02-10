@@ -3,11 +3,22 @@
     background: #f7f7f7;
 
     &__list {
-        display: flex;
-        justify-content: space-around;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-content: space-around; 
+        justify-items: center;
+        gap: 16px;
 
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            align-items: start; 
+            justify-items: start;
+        }
+    
         @media (max-width: 425px) {
-            flex-direction: column;
+            grid-template-columns: 1fr;
+            justify-items: center;
             gap: 50px;
         }
     }
@@ -17,7 +28,11 @@
         align-items: center;
         gap: 20px;
 
-        @media (max-width: 1024px) {
+        @media (max-width: 768px) {
+            gap: 8px;
+        }
+        
+        @media (max-width: 425px) {
             flex-direction: column;
             gap: 10px;
         }

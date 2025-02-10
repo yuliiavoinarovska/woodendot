@@ -44,18 +44,16 @@ document.addEventListener("DOMContentLoaded", function () {
         0.4
       )
       .fromTo(
-        ".hero__btn-black",
+        ".hero__subtitle",
         {
           opacity: 0,
-          y: 20,
         },
         {
-          y: 0,
           opacity: 1,
-          duration: 1.4,
+          duration: 1.8,
           ease: "power2.out",
         },
-        1.2
+        1
       );
 
     // BENEFITS SECTION

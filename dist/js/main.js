@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // SWIPER SLIDERS
   const swiper = new Swiper(".swiper", {
     loop: true,
+    initialSlide: 0,
     slidesPerView: 3,
     spaceBetween: 16,
     autoplay: {
@@ -113,13 +114,12 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
 
       let name = document.querySelector("#name").value;
-      let lastName = document.querySelector("#lastName").value;
       let email = document.querySelector("#email").value;
       let phone = document.querySelector("#phone").value;
       let message = document.querySelector("#message").value;
 
       // Текст повідомлення
-      let text = `📝 Нова заявка:\n\n👤 Ім'я: ${name} ${lastName}\n📧 Email: ${email}\n📞 Телефон: ${phone}\n💬 Повідомлення: ${message}`;
+      let text = `📝 Нова заявка:\n\n👤 Ім'я: ${name}\n📧 Email: ${email}\n📞 Телефон: ${phone}\n💬 Повідомлення: ${message}`;
 
       // Мій токен та chat_id
       let botToken = "7510297541:AAHmO586YPeqDk4z0h75CvEd6BJL6KR9ZDc";

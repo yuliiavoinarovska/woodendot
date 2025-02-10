@@ -2,6 +2,10 @@
     padding: 80px 0 60px 0;
     text-align: center;
 
+    @media (max-width: 768px) {
+        padding: 60px 0 ;
+    }
+
     @media (max-width: 425px) {
         padding: 20px 0 0 0;
     }
@@ -28,31 +32,4 @@
 
 .reviews-slider .swiper-slide {
     width: 80%;
-}
-
-.reviews .swiper-pagination {
-    position: static;
-    display: flex;
-    justify-content: center;
-    gap: 4px;
-    padding: 20px 0;
-}
-
-.reviews .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-    background-color: #000;
-    border-radius: 0;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  
-    &.swiper-pagination-bullet-active {
-        background-color: #000;
-        transform: scale(1.4); 
-    }
-  
-    &:hover {
-        background-color: #000;
-        transform: scale(1.4); 
-    }
 }

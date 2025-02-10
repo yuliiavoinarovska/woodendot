@@ -1,9 +1,9 @@
 {
-	"name": "portfolio_starter",
+	"name": "woodline",
 	"version": "1.0.0",
 	"description": "",
 	"main": "gulpfile.js",
-	"homepage": "https://yuliiavoinarovska.gihub.io/woodendot",
+	"homepage": "https://yuliiavoinarovska.gihub.io/woodline",
 	"scripts": {
 		"deploy": "gh-pages -d dist",
 		"test": "echo \"Error: no test specified\" && exit 1"
